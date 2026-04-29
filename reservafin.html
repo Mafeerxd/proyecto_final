@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reservafinal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Reserva Exclusiva - MaferMex</title>
+
+
+<body class="text-white">
+
+    <nav class="navbar navbar-dark sticky-top border-bottom border-dark">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="restaurante.html">
+                <img src="items/logo.png" alt="MaferMex" style="max-height: 45px;">
+            </a>
+            <button id="btn-logout" class="btn btn-sm btn-outline-secondary rounded-pill px-3">
+                <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+            </button>
+        </div>
+    </nav>
+
+    <main class="container d-flex align-items-center justify-content-center py-5" style="min-height: 85vh;">
+        <div class="card reserva-card p-4 p-lg-5 shadow-lg w-100" style="max-width: 500px;">
+            <div class="text-center mb-4">
+                <h2 class="font-family-playfair fw-bold" style="color: var(--gold);">Reserva de Mesa</h2>
+                <p class="text-secondary small">Vive una experiencia gastronómica inigualable</p>
+            </div>
+
+            <form id="reserva-form">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label small fw-bold text-uppercase opacity-75">Fecha</label>
+                        <input type="date" id="reserva-fecha" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label small fw-bold text-uppercase opacity-75">Hora</label>
+                        <input type="time" id="reserva-hora" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label small fw-bold text-uppercase opacity-75">Número de Comensales</label>
+                    <select id="reserva-personas" class="form-select">
+                        <option value="1">1 Persona (Barra)</option>
+                        <option value="2" selected>2 Personas</option>
+                        <option value="4">4 Personas</option>
+                        <option value="6">6 Personas</option>
+                        <option value="8+">Grupo Grande (8+)</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label small fw-bold text-uppercase opacity-75">Comentarios Especiales</label>
+                    <textarea id="reserva-notas" class="form-control" rows="3" placeholder="Alergias, cumpleaños, mesa en terraza..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-confirmar w-100 fw-bold">
+                    <i class="fas fa-calendar-check me-2"></i>CONFIRMAR RESERVA
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <div id="ticket-container">
+    <div class="ticket-visual">
+        <div class="ticket-header">
+            <img src="items/logo.png" class="ticket-logo" alt="MaferMex">
+            <h3 class="ticket-title">MAFERMEX</h3>
+            <p class="ticket-subtitle">RECIBO DE RESERVACIÓN</p>
+        </div>
+        
+        <div class="ticket-body">
+            <div class="ticket-row">
+                <span>FECHA:</span>
+                <strong id="t-fecha">--/--/--</strong>
+            </div>
+            <div class="ticket-row">
+                <span>HORA:</span>
+                <strong id="t-hora">--:--</strong>
+            </div>
+            <div class="ticket-row">
+                <span>COMENSALES:</span>
+                <strong id="t-personas">-</strong>
+            </div>
+            
+            <div class="ticket-user-box">
+                <small>CLIENTE:</small>
+                <div id="t-email" class="ticket-email-text">--</div>
+            </div>
+        </div>
+
+        <div class="ticket-footer">
+            <div class="qr-placeholder">
+                <i class="fas fa-qrcode fa-4x"></i>
+            </div>
+            <p class="ticket-instructions">POR FAVOR, TOMA UNA CAPTURA<br>Y PRESÉNTALA AL LLEGAR</p>
+            <button onclick="window.location.href='restaurante.html'" class="btn-finalizar">FINALIZAR</button>
+        </div>
+    </div>
+</div>
+
+            <div class="my-4">
+                <i class="fas fa-qrcode fa-5x"></i>
+                <p class="mt-2 small text-muted">Presenta este código al llegar</p>
+            </div>
+
+            <button onclick="window.location.href='restaurante.html'" class="btn btn-dark w-100 rounded-0">
+                FINALIZAR
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-black text-secondary py-5 border-top border-dark">
+        <div class="container text-center">
+            <img src="items/logo.png" alt="Logo" class="mb-4 opacity-50" style="max-height: 60px;">
+            <div class="mb-4">
+                <a href="#" class="text-secondary mx-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-secondary mx-3"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="small">© 2024 MaferMex. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script type="module" src="js/firebase-config.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reserva01.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <title>Inicia sesión - MafeerMex</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+    <div class="container-fluid px-5">
+        <a class="navbar-brand" href="#"><img src="items/logo.png" alt="MaferMex Logo" class="logo-navbar"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active text-warning" href="restaurante.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menú</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="promos.html">Promociones</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="d-none d-lg-block">
+            <a href="reserva.html" class="btn btn-reservacion">¡Haz tu reservación!</a>
+        </div>
+    </div>
+</nav>
+
+<section class="vh-100 d-flex align-items-center justify-content-center bg-black">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-4">
+                <div class="card bg-dark text-white border-secondary shadow-lg">
+                    <div class="card-body p-5 text-center">
+                        <img src="items/logo.png" alt="Logo" class="mb-4" style="max-height: 80px;">
+                        <h2 class="titulo-principal fs-2 mb-4">Iniciar Sesión</h2>
+                        
+                        <form id="login-form"> 
+                            <div class="mb-3 text-start">
+                                <label class="form-label font-family-poppins">Correo Electrónico</label>
+                                <input type="email" id="email" class="form-control bg-black text-white border-secondary" placeholder="ejemplo@correo.com" required>
+                            </div>
+                            <div class="mb-4 text-start">
+                                <label class="form-label font-family-poppins">Contraseña</label>
+                                <input type="password" id="password" class="form-control bg-black text-white border-secondary" placeholder="••••••••" required>
+                            </div>
+                            <button type="submit" class="btn btn-reservacion w-100 py-2">Ingresar</button>
+                        </form>
+
+                        <p class="mt-4 mb-0 small text-secondary">
+                            ¿No tienes cuenta? <a href="#" class="text-warning text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal">Regístrate aquí</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title titulo-principal fs-4">Crear Cuenta MaferMex</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="register-form">
+    <div class="mb-3">
+        <label>Correo</label>
+        <input type="email" id="reg-email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Contraseña</label>
+        <input type="password" id="reg-password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-reservacion w-100">Registrarse</button>
+</form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer class="bg-black text-white py-5 border-top border-secondary">
+    <div class="container">
+        <div class="row text-center align-items-center">
+            
+            <div class="col-md-4 mb-4 mb-md-0 px-4">
+                <img src="items/logo.png" alt="Logo" class="mb-3" style="max-height: 80px;">
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Mafeerw3asley" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/itsme_mafx/" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 mb-md-0 px-4 border-start-custom border-end-custom">
+                <ul class="list-unstyled footer-links">
+                    <li><a href="restaurante.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="promos.html">Promociones</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 px-4">
+                <ul class="list-unstyled footer-links">
+                    <li><a href="avisopriv.html">Aviso de Privacidad</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-3 border-top border-dark ">
+            <div class="col-12 text-start">
+                <p class="small text-secondary text-center">© MaferMexx</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/bootstrap.bundle.js"></script>
+<script type="module" src="js/firebase-config.js"></script>
+</html>

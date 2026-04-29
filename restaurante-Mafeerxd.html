@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Mafeermex- comida mexicana</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#"><img src="items/logo.png" alt="MaferMex Logo" class="logo-navbar"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning" href="restaurante.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promos.html">Promociones</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="d-none d-lg-block">
+                <a href="reserva.html" class="btn btn-reservacion">¡Haz tu reservación!</a>
+            </div>
+        </div>
+    </nav>
+
+    <div data-aos   ="zoom-in-down">
+        <header class="header-mexicano text-center p-5">
+            <h1 class="titulo-principal">Comida Mexicana</h1>
+            <p class="subtitulo-mexicano">La mejor comida mexicana que puedas encontrar</p>
+        </header>
+    </div>
+    
+    <section class="bg-black text-white text-center py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8" data-aos="fade-up">
+                <p class="fs-2 fw-light mb-0">
+                    Somos el restaurante mexicano ideal para celebrar un día especial: cumpleaños, propuestas de matrimonio, graduaciones, bodas  y más.
+                </p>
+                <br>
+                <p class="fs-4 fw-light mb-0">
+                    ¡Aprovecha nuestras promociones!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="imagen-espada">
+    <div class="container-fluid p-0">
+        <img src="items/cumple.png" alt="cumple" class="img-fluid w-100" style="height: 500px; object-fit: cover; display: block;">
+    </div>
+</section>
+
+<section class="restaurante-carrusel bg-black py-5">
+    <div class="container">
+        <h2 class="text-white text-center mb-4 display-6">¡La comida más deliciosa!</h2>
+        
+        <div id="carouselRestaurante" class="carousel slide carousel-fade" 
+             data-bs-ride="carousel" 
+             data-bs-interval="2000" 
+             data-bs-pause="false">
+            
+            <div class="carousel-inner rounded-4 shadow-lg">
+                <div class="carousel-item active">
+                    <img src="items/personas-comiendo2.png" class="w-100 img-carrusel" alt="Interior">
+                    <div class="carousel-caption">
+                        <h5 class="fw-bold">Ambiente Familiar</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="items/mesacomida.png" class="d-block w-100 img-carrusel" alt="Carnes">
+                    <div class="carousel-caption">
+                        <h5 class="fw-bold">Los Platillos Más Ricos</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="items/meseros.png" class="w-100 img-carrusel" alt="Barra">
+                    <div class="carousel-caption">
+                        <h5 class="fw-bold">El Mejor Servicio</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-black text-white py-5 border-top border-secondary">
+    <div class="container">
+        <div class="row text-center align-items-center">
+            
+            <div class="col-md-4 mb-4 mb-md-0 px-4">
+                <img src="items/logo.png" alt="Logo" class="mb-3" style="max-height: 80px;">
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Mafeerw3asley" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/itsme_mafx/" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+
+            <div class="col-md-4 mb-4 mb-md-0 px-4 border-start-custom border-end-custom">
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="promos.html">Promociones</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 px-4">
+                <ul class="list-unstyled footer-links">
+                    <li><a href="avisopriv.html">Aviso de Privacidad</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-3 border-top border-dark ">
+            <div class="col-12 text-start">
+                <p class="small text-secondary text-center">© MaferMexx</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<a href="https://wa.me/5648117005" class="whatsapp-flotante" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+</body>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</html>

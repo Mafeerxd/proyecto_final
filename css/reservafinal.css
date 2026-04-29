@@ -1,0 +1,120 @@
+:root {
+            --gold: #d4af37;
+            --dark-gray: #1a1a1a;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+        }
+        .font-family-playfair { font-family: 'Playfair Display', serif; }
+        
+        .navbar { background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); }
+        
+        .reserva-card {
+            background: var(--dark-gray);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .form-control, .form-select {
+            background-color: #0a0a0a !important;
+            border: 1px solid #333 !important;
+            color: white !important;
+            padding: 12px;
+            border-radius: 8px;
+        }
+        .form-control:focus {
+            border-color: var(--gold) !important;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+        }
+        
+        .btn-confirmar {
+            background: linear-gradient(45deg, #b8860b, #d4af37);
+            border: none;
+            color: black;
+            letter-spacing: 2px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-confirmar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            background: var(--gold);
+        }
+
+#ticket-container {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.ticket-visual {
+    background: #ffffff;
+    color: #1a1a1a;
+    width: 90%;
+    max-width: 340px;
+    padding: 30px;
+    border-radius: 2px;
+    font-family: 'Courier New', Courier, monospace; /* Fuente de recibo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+/* Efecto de borde dentado (papel cortado) */
+.ticket-visual::before, .ticket-visual::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-size: 15px 15px;
+}
+.ticket-visual::before {
+    top: -10px;
+    background-image: linear-gradient(135deg, #fff 5px, transparent 0), linear-gradient(-135deg, #fff 5px, transparent 0);
+}
+.ticket-visual::after {
+    bottom: -10px;
+    background-image: linear-gradient(45deg, #fff 5px, transparent 0), linear-gradient(-45deg, #fff 5px, transparent 0);
+}
+
+.ticket-header { text-align: center; border-bottom: 2px dashed #ccc; padding-bottom: 15px; }
+.ticket-logo { max-height: 40px; filter: grayscale(1); margin-bottom: 10px; }
+.ticket-title { letter-spacing: 3px; margin: 0; font-weight: bold; }
+.ticket-subtitle { font-size: 11px; margin: 5px 0 0; opacity: 0.7; }
+
+.ticket-body { padding: 20px 0; }
+.ticket-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 15px; }
+
+.ticket-user-box { 
+    margin-top: 15px; 
+    padding: 10px; 
+    background: #f4f4f4; 
+    border-radius: 4px; 
+    text-align: center; 
+}
+.ticket-email-text { font-size: 12px; word-break: break-all; margin-top: 5px; font-weight: bold; }
+
+.ticket-footer { text-align: center; border-top: 2px dashed #ccc; padding-top: 15px; }
+.qr-placeholder { margin: 15px 0; opacity: 0.8; }
+.ticket-instructions { font-size: 10px; line-height: 1.4; color: #666; margin-bottom: 15px; }
+
+.btn-finalizar {
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-finalizar:hover { background: #333; }
+
+        

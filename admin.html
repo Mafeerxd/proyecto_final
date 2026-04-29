@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Panel de Meseros - MaferMex</title>
+    <style>
+        body { background-color: #000; color: white; font-family: 'Poppins', sans-serif; }
+        .admin-container { padding: 40px 20px; }
+        .table-reserva { 
+            background-color: #111; 
+            border-radius: 10px; 
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .table-reserva thead { background-color: #d4af37; color: black; }
+        .table-reserva td { vertical-align: middle; border-color: #222; color: #ccc; }
+        .btn-check-res { color: #d4af37; cursor: pointer; transition: 0.3s; }
+        .btn-check-res:hover { color: #fff; transform: scale(1.2); }
+        .status-badge { font-size: 0.8rem; padding: 5px 10px; border-radius: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-black border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand font-family-playfair" href="#">
+                <img src="items/logo.png" style="max-height: 40px;" class="me-2"> 
+                PANEL DE CONTROL MESEROS
+            </a>
+            <button onclick="window.location.reload()" class="btn btn-outline-warning btn-sm">
+                <i class="fas fa-sync-alt"></i> Actualizar
+            </button>
+        </div>
+    </nav>
+
+    <div class="container admin-container">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h2 class="font-family-playfair" style="color: #d4af37;">Próximas Reservaciones</h2>
+                <p class="text-secondary">Lista en tiempo real de los clientes registrados.</p>
+            </div>
+        </div>
+
+        <div class="table-responsive table-reserva">
+            <table class="table table-dark table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Cliente</th>
+                        <th>Pax</th>
+                        <th>Notas</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-reservaciones">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="js/admin-script.js"></script>
+</body>
+</html>
