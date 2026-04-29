@@ -12,21 +12,17 @@ const firebaseConfig = {
     appId: "1:140753612550:web:33bd69a83caf10b8d5b887"
 };
 
-// 2. INICIALIZACIÓN
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
 const listaContenedor = document.getElementById('lista-reservaciones');
 
-// 3. FUNCIÓN PRINCIPAL: CARGAR DATOS EN TIEMPO REAL
 function escucharReservas() {
-    // Consultamos la colección "reservaciones" ordenada por tiempo
     const q = query(collection(db, "reservaciones"), orderBy("timestamp", "desc"));
 
-    // onSnapshot mantiene una conexión abierta con Firebase
     onSnapshot(q, (snapshot) => {
-        listaContenedor.innerHTML = ""; // Limpiar tabla antes de actualizar
+        listaContenedor.innerHTML = "";
 
         if (snapshot.empty) {
             listaContenedor.innerHTML = `<tr><td colspan="6" class="text-center text-secondary">No hay reservaciones pendientes.</td></tr>`;
@@ -63,7 +59,6 @@ function escucharReservas() {
     });
 }
 
-// 4. VERIFICAR AUTENTICACIÓN ANTES DE MOSTRAR DATOS
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("Acceso concedido a:", user.email);
@@ -71,11 +66,10 @@ onAuthStateChanged(auth, (user) => {
     } else {
         console.warn("Acceso denegado. Redirigiendo...");
         alert("Debes iniciar sesión para ver el panel de meseros.");
-        window.location.href = "login.html"; // Ajusta al nombre de tu archivo de login
+        window.location.href = "reserva01.html"; 
     }
 });
 
-// 5. FUNCIONES GLOBALES PARA LOS BOTONES
 window.confirmarLlegada = (btn) => {
     const fila = btn.closest('tr');
     fila.classList.toggle('opacity-50');
@@ -92,7 +86,6 @@ window.borrarReserva = async (id) => {
     if (confirm("¿Marcar reserva como finalizada/eliminada?")) {
         try {
             await deleteDoc(doc(db, "reservaciones", id));
-            // No hace falta recargar, onSnapshot lo hará solo
         } catch (error) {
             alert("Error al eliminar: " + error.message);
         }
